@@ -33,7 +33,7 @@
 	                &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET            &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
-			sensor-bindings = <&inc_dec_kp J K &inc_dec_kp B W>;
+			//sensor-bindings = <&inc_dec_kp J K &inc_dec_kp B W>;
 		};
 
 		number_layer {
@@ -49,7 +49,8 @@
 	                 &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET        &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
 		};
 	};
+
 };
