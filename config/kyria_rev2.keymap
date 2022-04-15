@@ -29,14 +29,14 @@
 			bindings = <
 	&kp ESC   &kp APOS &kp COMMA &kp DOT &kp P &kp Y                                                  &kp F &kp G  &kp C &kp R   &kp L &kp ESC
 	&kp TAB   &kp A &kp O &kp E &kp U &kp I                                                  &kp D &kp H  &kp T &kp N   &kp S &kp MINUS
-	&kp CTRL  &kp SEMI &kp Q &kp J &kp K &kp X &mo SPCL_LAY1 &kp LC(SHIFT) &mo NUMS_LAT &kp ALT &kp B &kp M  &kp W &kp V   &kp Z &kp RCTRL
+	&kp CTRL  &kp SEMI &kp Q &kp J &kp K &kp X &mo SPCL_LAY1 &kp LC(SHIFT) &mo NUMS_LAY &kp ALT &kp B &kp M  &kp W &kp V   &kp Z &kp RCTRL
 	                &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET            &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
 			sensor-bindings = <&inc_dec_kp J K &inc_dec_kp B W>;
 		};
 
-		NUMS_LAY {
+		number_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | ESC  |  `  |  {  |  (   |  [   |  <   |                                               |  >   |  ]  |  )  |  }  |  ~  | ESC  |
 // | TAB  |  1  |  2  |  3   |  4   |  5   |                                               |  6   |  7  |  8  |  9  |  0  |   -  |
@@ -45,7 +45,7 @@
 			bindings = <
 	&kp ESC &kp GRAVE &kp LBRC &kp KP_LPAR &kp LBKT &kp LT                               &kp GT &kp RBKT &kp KP_RPAR &kp RBRC &kp TILDE &kp ESC
 	&kp TAB &kp 1 &kp 2 &kp 3 &kp 4 &kp 5                                                &kp 6 &kp 7  &kp 8     &kp 9   &kp 0 &kp MINUS
-	&kp CTRL &kp SEMI &kp none &kp BSLH &kp none &kp none  &mo SPCL_LAY2   &kp LC(SHIFT) &mo NUMS_LAT &kp ALT &kp none &kp none  &kp FSLH &kp none &kp none &kp RCTRL
+	&kp CTRL &kp SEMI &kp none &kp BSLH &kp none &kp none  &mo SPCL_LAY2   &kp LC(SHIFT) &mo NUMS_LAY &kp ALT &kp none &kp none  &kp FSLH &kp none &kp none &kp RCTRL
 	                 &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET        &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
