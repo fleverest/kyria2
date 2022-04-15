@@ -10,24 +10,46 @@
 // Bluetooth
 #include <dt-bindings/zmk/bt.h>
 
+#define ALPH_LAY 0
+#define NUMS_LAY 1
+#define SPCL_LAY1 2
+#define SPCL_LAY2 3
+
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
 		default_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |BT_CLR |  Q  |  W  |  E   |  R   |  T   |                                          |  Y   |  U    |  I    |  O   |   P   |  \   |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                                          |  H   |  J    |  K    |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   | L SHIFT | L SHIFT |  | L SHIFT | L SHIFT |  N   |  M    |  ,    |  .   |   /   | CTRL |
-//                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
+// | ESC  |  '  |  ,  |  .   |  P   |  Y   |                                               |  F   |  G  |  C  |  R  |  L  | ESC  |
+// | TAB  |  A  |  O  |  E   |  U   |  I   |                                               |  D   |  H  |  T  |  N  |  S  |   -  |
+// | CTRL |  ;  |  Q  |  J   |  K   |  X   | SPCL_LAY1 | LC(SHIFT) |    | NUMS_LAY |  ALT  |  B  |  M  |  W  |  V  |  Z  | CTRL |
+//                        | GUI  | ESC  | DEL  |  SPACE  |   RET   |    |   SHIFT  | SPACE | BSPC  | TAB  | R-ALT |
 			bindings = <
-	&kp ESC   &kp Q &kp W &kp E &kp R &kp T                                                &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-	&kp TAB   &kp A &kp S &kp D &kp F &kp G                                                &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-	&kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp LSHFT &kp LSHFT        &kp LSHFT &kp LSHFT &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RCTRL
-	                 &kp LGUI &kp DEL &kp RET &kp SPACE &kp ESC        &kp RET  &kp SPACE  &kp TAB &kp BSPC &kp RALT
+	&kp ESC   &kp APOS &kp COMMA &kp DOT &kp P &kp Y                                                  &kp F &kp G  &kp C &kp R   &kp L &kp ESC
+	&kp TAB   &kp A &kp O &kp E &kp U &kp I                                                  &kp D &kp H  &kp T &kp N   &kp S &kp MINUS
+	&kp CTRL  &kp SEMI &kp Q &kp J &kp K &kp X &mo SPCL_LAY1 &kp LC(SHIFT) &mo NUMS_LAT &kp ALT &kp B &kp M  &kp W &kp V   &kp Z &kp RCTRL
+	                &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET            &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp J K &inc_dec_kp B W>;
+		};
+
+		NUMS_LAY {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// | ESC  |  `  |  {  |  (   |  [   |  <   |                                               |  >   |  ]  |  )  |  }  |  ~  | ESC  |
+// | TAB  |  1  |  2  |  3   |  4   |  5   |                                               |  6   |  7  |  8  |  9  |  0  |   -  |
+// | CTRL |  ;  | NA  |  \   |  NA  |  NA  | SPCL_LAY2 | LC(SHIFT) |    | SPCL_LAY2 |  ALT  |  NA |  NA |  /  |  NA |  NA | CTRL |
+//                        | GUI  | ESC  | DEL  |  SPACE  |   RET   |    |   SHIFT   | SPACE | BSPC  | TAB  | R-ALT |
+			bindings = <
+	&kp ESC &kp GRAVE &kp LBRC &kp KP_LPAR &kp LBKT &kp LT                               &kp GT &kp RBKT &kp KP_RPAR &kp RBRC &kp TILDE &kp ESC
+	&kp TAB &kp 1 &kp 2 &kp 3 &kp 4 &kp 5                                                &kp 6 &kp 7  &kp 8     &kp 9   &kp 0 &kp MINUS
+	&kp CTRL &kp SEMI &kp none &kp BSLH &kp none &kp none  &mo SPCL_LAY2   &kp LC(SHIFT) &mo NUMS_LAT &kp ALT &kp none &kp none  &kp FSLH &kp none &kp none &kp RCTRL
+	                 &kp LGUI &kp ESC &kp DEL &kp SPACE &kp RET        &kp SHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
 		};
 	};
 };
