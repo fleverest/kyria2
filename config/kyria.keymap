@@ -7,6 +7,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+// RGB underglow
+#include <dt-bindings/zmk/rgb.h>
+
 // Bluetooth
 #include <dt-bindings/zmk/bt.h>
 
@@ -72,10 +75,10 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |
       bindings = <
-	&trans &kp RGB_TOG &kp RGB_BRI &kp RGB_BRD &none  &none                               &none  &none  &none  &none &none &none
-	&trans &kp RGB_HUI &kp RGB_HUD &kp RGB_SAI &none  &none                               &none  &none  &none  &none &none &none
-	&trans &none       &none       &none       &none  &none  &none  &trans  &none  &trans &none  &none  &none  &none &none &none
-                                 &trans      &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+	&kp RGB_TOG &kp RGB_BRI &kp RGB_BRD &none  &none  &none                   &none  &none  &none  &none  &none &none
+	&trans      &kp RGB_HUI &kp RGB_HUD &none  &none  &none                   &none  &none  &none  &none  &none &none
+	&trans      &kp RGB_SAI &kp RGB_SAD &none  &none  &none  &none  &trans    &none  &trans &none  &none  &none &none &none &none
+                                      &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
