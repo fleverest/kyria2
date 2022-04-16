@@ -48,7 +48,7 @@
 	&trans &kp GRAVE &kp LBRC &kp KP_LPAR &kp LBKT &kp LT                                           &kp GT &kp RBKT &kp KP_RPAR &kp RBRC &kp TILDE &trans
 	&trans &kp 1     &kp 2    &kp 3       &kp 4    &kp 5                                            &kp 6  &kp 7  &kp 8         &kp 9    &kp 0     &trans
 	&trans &trans    &none    &kp BSLH    &none    &none  &mo SPCL_LAY2 &kp LCTRL   &none  &kp LALT &none  &none  &kp FSLH      &none    &none     &trans
-                            &trans      &trans   &trans &trans        &trans      &trans &trans   &trans &trans &trans        &trans
+                            &trans      &trans   &trans &trans        &trans      &trans &trans   &trans &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
@@ -60,8 +60,22 @@
       bindings = <
 	&trans &kp F1  &kp F2  &kp F3   &kp F4     &kp F5                                     &none  &none  &none  &none  &kp RIGHT   &trans
 	&trans &kp F6  &kp F7  &kp F8   &kp F9     &kp F10                                    &none &kp LEFT &none &none &none        &none
-	&trans &kp F11 &kp F12 &kp DOWN &kp UP  &none  &none  &trans        &mo SPCL_LAY2 &trans &none  &none  &none  &none &none  &kp RCTRL
-                 &trans  &trans   &trans     &trans &trans &trans        &trans &trans &trans &trans &trans
+	&trans &kp F11 &kp F12 &kp DOWN &kp UP  &none  &none  &trans        &mo SPCL_LAY2 &trans &none  &none  &none  &none &none  &none
+                      &trans   &trans     &trans &trans &trans        &trans &trans &trans &trans &trans
+			>;
+
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
+		};
+  };
+
+  special_2 {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |
+      bindings = <
+	&trans &kp RGB_TOG &kp RGB_BRI &kp RGB_BRD &none  &none                               &none  &none  &none  &none &none &none
+	&trans &kp RGB_HUI &kp RGB_HUD &kp RGB_SAI &none  &none                               &none  &none  &none  &none &none &none
+	&trans &none       &none       &none       &none  &none  &none  &trans  &none  &trans &none  &none  &none  &none &none &none
+                                 &trans      &trans &trans &trans &trans  &trans &trans &trans &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
