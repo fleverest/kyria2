@@ -29,13 +29,13 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // | ESC  |  '  |  ,  |  .   |  P   |  Y   |                                               |  F   |  G  |  C  |  R  |  L  | ESC  |
 // | TAB  |  A  |  O  |  E   |  U   |  I   |                                               |  D   |  H  |  T  |  N  |  S  |   -  |
-// | LCTRL |  ;  |  Q  |  J   |  K   |  X   | SPCL_LAY1 | LCTRL |    | NUMS_LAY |    |  B  |  M  |  W  |  V  |  Z  | CTRL |
-//                        | GUI  | ESC  | DEL  |  SPACE  |   RET   |    |   LSHIFT  | SPACE | BSPC  | TAB  | R-ALT |
+// | LCTRL |  ;  |  Q  |  J   |  K   |  X   | LCTRL | SPCL_LAY1 |    | NUMS_LAY |    |  B  |  M  |  W  |  V  |  Z  | CTRL |
+//                        | GUI  | ESC  | DEL  |  SPACE  | LSHIFT |    | RET | SPACE | BSPC  | TAB  | R-ALT |
 			bindings = <
 	&kp ESC   &kp SQT &kp COMMA &kp DOT &kp P &kp Y                                         &kp F &kp G  &kp C &kp R   &kp L &kp ESC
 	&kp TAB   &kp A &kp O &kp E &kp U &kp I                                                  &kp D &kp H  &kp T &kp N   &kp S &kp MINUS
 	&kp LCTRL  &kp SEMI &kp Q &kp J &kp K &kp X &kp LCTRL &mo SPCL_LAY1 &mo NUMS_LAY &kp LALT &kp B &kp M  &kp W &kp V   &kp Z &kp RCTRL
-	                &kp GUI &kp ESC &kp DEL &kp SPACE &kp RET                  &kp LSHIFT  &kp SPACE  &kp BSPC &kp TAB &kp RALT
+	                &kp GUI &kp ESC &kp DEL &kp SPACE &kp LSHIFT                  &kp RET  &kp SPACE  &kp BSPC &kp TAB &kp RALT
 			>;
 
 			sensor-bindings = <&inc_dec_kp J K &inc_dec_kp B W>;
