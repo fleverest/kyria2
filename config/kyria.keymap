@@ -14,10 +14,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define ALPH_LAY 0
-#define NUMS_LAY 1
-#define SPCL_LAY1 2
-#define SPCL_LAY2 3
-#define QWERTY_LAY 4
+#define QWERTY_LAY 1
+#define NUMS_LAY 2
+#define SPCL_LAY1 3
+#define SPCL_LAY2 4
 
 #define NONE 0
 
